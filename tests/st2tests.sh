@@ -57,3 +57,8 @@ load "${BATS_HELPERS_DIR}/bats-file/load.bash"
   assert_success
   assert_line --partial 'chatops.notify'
 }
+
+@test 'can set st2 key/value pair' {
+  run st2 key set foo bar
+  assert_success
+}
